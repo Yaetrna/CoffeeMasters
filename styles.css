@@ -1,0 +1,240 @@
+:root {
+    --main: #412315;
+    --text: #fbf2c0;
+    --grid-background: #eee1d5;
+    --btn: #deb993;
+    --card-text: #885a2d;
+    --background: #efefef;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: var(--background);
+}
+
+.navbar {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--main);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 40px;
+    margin: 5px;
+}
+
+.checkout-info {
+    display: grid;
+    grid-template-areas: "left right";
+}
+
+.left-side {
+    grid-area: left;
+    margin: 15px;
+}
+
+.right-side {
+    grid-area: right;
+    margin: 15px;
+}
+
+.card {
+    font-weight: bold;
+    display: block;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px 25px;
+    margin: 30px 0;
+    border-radius: 25px;
+    background-color: var(--grid-background);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    translate: 0 0;
+    transition: translate;
+    transition-duration: 1.5s;
+}
+
+.card:hover {
+    translate: 0 -5px;
+    transition: translate;
+    transition-duration: 0.5s;
+}
+
+.card-content {
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+
+.input {
+    border-radius: 100px;
+    width: 100%;
+    height: 50px;
+    padding: 25px;
+    font-size: 20px;
+    border-color: var(--card-text);
+    outline: none;
+    color: var(--card-text);
+}
+
+.input::placeholder {
+    color: var(--card-text);
+    opacity: 50%;
+}
+
+.checkout-info {
+    margin: 40px 30px;
+    color: var(--card-text);
+}
+
+.items {
+    list-style: none;
+    padding-left: 0;
+}
+
+.item-quantity {
+    grid-area: quant;
+}
+
+.item-name {
+    grid-area: name;
+}
+
+.item-cost {
+    grid-area: cost;
+    text-align: right;
+}
+
+.item-extra {
+    display: flex;
+    font-weight: normal;
+    opacity: 0.85;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-areas:
+    "quant name cost"
+    "quant extra cost"
+    "quant extra cost";
+    row-gap: 8px;
+    border-bottom: 2px solid #DDB892;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.name-label {
+    position: absolute;
+    translate: 25px -9px;
+    padding: 0 5px;
+    background-color: var(--grid-background);
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.item-quantity {
+    font-weight: normal;
+    text-align: left;
+}
+
+.input {
+    background-color: transparent;
+}
+
+.checkout-confirmation {
+    display: flex;
+    justify-content: center;
+}
+
+.table {
+    width: 25%;
+}
+
+.left-table {
+    text-align: left;
+}
+
+.right-table {
+    text-align: right;
+}
+
+.total {
+    font-weight: bold;
+}
+
+.center {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin: 20px;
+}
+.btn {
+    width: 455px;
+    height: 50px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0 rgba(0,0,0,.1),
+    4px 4px 5px 0 rgba(0,0,0,.1);
+    outline: none;
+}
+
+.btn-14 {
+    background: rgb(255,151,0);
+    border: none;
+    z-index: 1;
+}
+.btn-14:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 5px;
+    background-color: #eaf818;
+    background-image: linear-gradient(315deg, #eaf818 0%, #f6fc9c 74%);
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5);
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+    transition: all 0.3s ease;
+}
+.btn-14:hover {
+    color: #000;
+}
+.btn-14:hover:after {
+    top: auto;
+    bottom: 0;
+    height: 100%;
+}
+.btn-14:active {
+    top: 2px;
+}

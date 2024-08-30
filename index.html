@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+            rel="stylesheet"
+    />
+    <link
+            href="styles.css"
+            rel="stylesheet"
+    >
+</head>
+<body>
+<header>
+    <div class="navbar">
+        <img alt="Coffee Masters Logo" src="images/coffee_masters_logo.png">
+        <h1>Coffee Masters</h1>
+    </div>
+</header>
+<div class="checkout-info">
+    <div class="left-side">
+        <div class="card">ITEMS
+            <ul class="items">
+                <li class="item">
+                    <div class="item-quantity">1x</div>
+                    <div class="item-name">Cappuccino</div>
+                    <div class="item-cost">6.00€</div>
+                    <div class="item-extra">Light Foam</div>
+                </li>
+                <li class="item">
+                    <div class="item-quantity">1x</div>
+                    <div class="item-name">Cappuccino</div>
+                    <div class="item-cost">7.90€</div>
+                    <div class="item-extra">Almond Milk</div>
+                    <div class="item-extra">Double Espresso Shot</div>
+                </li>
+                <li class="item">
+                    <div class="item-quantity">1x</div>
+                    <div class="item-name">Crossiant</div>
+                    <div class="item-cost">5.37€</div>
+                    <div class="item-extra">Butter</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="right-side">
+        <div class="card">NAME
+            <div class="card-content">
+                <label class="name-label">Name for order</label>
+                <input type="text" class="input" placeholder="John Snow">
+            </div>
+        </div>
+        <div class="card">PAYMENT
+            <div class="card-content">
+                <label class="name-label">Card number</label>
+                <input type="text" class="input" placeholder="0865-7379-4013-8792">
+            </div>
+            <div class="card-content">
+                <label class="name-label">CCV number</label>
+                <input type="text" class="input" placeholder="1086">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="checkout-confirmation">
+    <table class="table">
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <td class="left-table">Subtotal:</td>
+            <td class="right-table">19.27€</td>
+        </tr>
+        <tr>
+            <td class="left-table">Tax:</td>
+            <td class="right-table">3.66€</td>
+        </tr>
+        <!-- There is surely a better way to space this,
+             however this is WebDevelopment so
+             I wouldn't be surprised if this is "optimal" -->
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="total">
+            <td class="left-table">Total:</td>
+            <td class="right-table">22.93€</td>
+        </tr>
+    </table>
+</div>
+<div class="center">
+    <button class="btn btn-14">Place order</button>
+</div>
+</body>
+</html>
